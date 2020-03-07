@@ -1,8 +1,11 @@
 package com.thoughtworks;
 
-public class Restaurant {
+import java.util.ArrayList;
 
+public class Restaurant {
   public String bestCharge(String selectedItems) {
-    return null;
+    ArrayList<DishOrdered> dishOrdered = new DateToOrder().dateToOrder(selectedItems);
+    FinalInfo finalInfo = new FinalInfo(dishOrdered);
+    return finalInfo.getFinalInfo();
   }
 }
